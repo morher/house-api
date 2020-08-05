@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>house-api-parent</artifactId>
+	<groupId>net.morher.house</groupId>
+	<version>0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>House API Parent</name>
+	<url>http://app.morher.net/house</url>
+
+	<properties>
+		<!-- Build -->
+		<java.source>1.8</java.source>
+		<java.target>1.8</java.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		
+		<!-- Maven Plugin Versions -->
+		<wagon-webdav.version>3.0.0</wagon-webdav.version>
+		<compiler.version>3.8.0</compiler.version>
+	</properties>
+
+	<modules>
+		<module>house-api</module>
+	</modules>
+
+	<dependencies>
+		<!-- TEST -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.1.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>3.3.3</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- House API artifacts -->
+			<dependency>
+				<artifactId>house-api</artifactId>
+				<groupId>net.morher.house</groupId>
+				<version>${project.version}</version>
+			</dependency>
+			
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<source>${java.source}</source>
+					<target>${java.target}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav-jackrabbit</artifactId>
+				<version>${wagon-webdav.version}</version>
+			</extension>
+		</extensions>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>hd-repo-dav</id>
+			<url>dav:https://repo.h-dataservice.net/files/</url>
+		</repository>
+	</distributionManagement>
+
+</project>
