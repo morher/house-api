@@ -19,7 +19,8 @@ import java.util.UUID;
  * {@link EventGateway}. Events dispatch through a gateway will not be delivered back to the same gateway, but it will be
  * delivered to all local services and all other gateways.
  * 
- * The {@code type} signals what has happened, or alternatively what action is requested. The event can also carry a
+ * The {@code type} signals what has happened, or alternatively what action is requested. The optional field {@code subject}
+ * tells what physical object the event originated from, or what object the action is requested of. The event can also carry a
  * {@code payload} in the form of key-value pairs. Both the key and the value are {@link String}s. Events will automatically be
  * assigned an {@code id} for tracking purposes.
  * 
@@ -28,11 +29,13 @@ import java.util.UUID;
 public class Event {
     private final String id;
     private final String type;
+    private final String subject;
     private final Map<String, String> payload;
 
-    public Event(String id, String type, Map<String, String> payload) {
+    public Event(String id, String type, String subject, Map<String, String> payload) {
         this.id = id;
         this.type = type;
+        this.subject = subject;
         this.payload = payload != null
                 ? Collections.unmodifiableMap(payload)
                 : Collections.emptyMap();
@@ -44,6 +47,10 @@ public class Event {
 
     public String getType() {
         return type;
+    }
+
+    public String getSubject() {
+        return subject;
     }
 
     public Map<String, String> getPayload() {
@@ -71,6 +78,7 @@ public class Event {
     public static class Builder {
         private final String id;
         private final String type;
+        private String subject;
 
         private final Map<String, String> payload = new HashMap<>();
 
@@ -83,13 +91,18 @@ public class Event {
             this.type = type;
         }
 
+        public Builder withSubject(String subject) {
+            this.subject = subject;
+            return this;
+        }
+
         public Builder withAttribute(String key, String value) {
             payload.put(key, value);
             return this;
         }
 
         public Event build() {
-            return new Event(id, type, payload);
+            return new Event(id, type, subject, payload);
         }
 
         private static String generateId() {
