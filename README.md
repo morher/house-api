@@ -2,7 +2,7 @@
 House is a framework for home automation. It consist of three parts: the API, house modules and the container. The modules consists of services that are run by the container. The services communicate between themselves through events. The API defines the interfaces module services uses to communicate and operate.
 
 ## Modules
-A module is one or more services packed in a jar, with all dependencies except the House API package.
+A module is one or more services packed in a jar, with all dependencies except the House API and Core packages.
 
 ## Services
 A service in House is a class that implements HouseService, although implementations should rather extend the BaseService class to be future-proof in case of new additions to the interface. Services should be made to serve a small dedicated purpose with a general event interface. The services should work together to provide more advanced functionality.

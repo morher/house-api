@@ -11,10 +11,13 @@ import java.util.Optional;
 public interface ConfigurationElement extends Iterable<ConfigurationElement> {
 
     /**
-     * Get the configuration element with the given path.
+     * Get the configuration element with the given path. A {@link ConfigurationElement} is always returned even if the path is
+     * not present in the configuration. Each node in the path is separated by a period. For example "node.anotherNode".
      * 
      * @param path
-     * @return
+     *            The node path to get
+     * 
+     * @return The node if present, otherwise an empty node.
      */
     ConfigurationElement get(String path);
 

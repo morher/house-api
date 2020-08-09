@@ -23,10 +23,18 @@
 
 	<modules>
 		<module>house-api</module>
+		<module>house-core</module>
 	</modules>
 
 	<dependencies>
-		<!-- TEST -->
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.30</version>
+		</dependency>
+		
+		<!-- Test -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-engine</artifactId>
@@ -47,6 +55,12 @@
 			<!-- House API artifacts -->
 			<dependency>
 				<artifactId>house-api</artifactId>
+				<groupId>net.morher.house</groupId>
+				<version>${project.version}</version>
+			</dependency>
+			
+			<dependency>
+				<artifactId>house-core</artifactId>
 				<groupId>net.morher.house</groupId>
 				<version>${project.version}</version>
 			</dependency>
