@@ -101,6 +101,11 @@ public class Event {
             return this;
         }
 
+        public Builder withAttributes(Map<String, String> attributes) {
+            payload.putAll(attributes);
+            return this;
+        }
+
         public Event build() {
             return new Event(id, type, subject, payload);
         }
