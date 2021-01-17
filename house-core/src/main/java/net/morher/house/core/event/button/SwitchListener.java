@@ -18,7 +18,9 @@ import net.morher.house.core.event.template.EventType;
  * 
  * @author Morten Hermansen
  * 
- * @see {@link EventTemplate}, {@link ButtonListener}, {@link StatusReporting}
+ * @see EventTemplate
+ * @see ButtonListener
+ * @see StatusReporting
  */
 public interface SwitchListener {
     // Event type
@@ -29,7 +31,7 @@ public interface SwitchListener {
      * They should however be sent whenever the state is changed or when a status report is requested through
      * {@link StatusReporting#pollState()}.
      * 
-     * @param state
+     * @param switchState
      *            The current reported switch state
      */
     @EventType(STATE_REPORT)

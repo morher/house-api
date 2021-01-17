@@ -43,7 +43,7 @@ public interface ConfigurationElement extends Iterable<ConfigurationElement> {
     Optional<Boolean> asBoolean();
 
     /**
-     * Shortcut for {@link #get(String) and {@link #asString()} that will return {@code null} if the value is absent.
+     * Shortcut for {@link #get(String)} and {@link #asString()} that will return {@code null} if the value is absent.
      * 
      * @param path
      * @return The {@link String} value of the given path is present, otherwise {@code null}.

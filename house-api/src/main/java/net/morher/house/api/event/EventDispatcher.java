@@ -18,8 +18,6 @@ public interface EventDispatcher {
 
     /**
      * 
-     * 
-     * @param ownerModule
      * @param eventListener
      * @return
      */

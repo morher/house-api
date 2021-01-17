@@ -15,7 +15,7 @@
 		<java.source>1.8</java.source>
 		<java.target>1.8</java.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		
+
 		<!-- Maven Plugin Versions -->
 		<wagon-webdav.version>3.0.0</wagon-webdav.version>
 		<compiler.version>3.8.0</compiler.version>
@@ -34,7 +34,7 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.30</version>
 		</dependency>
-		
+
 		<!-- Test -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
@@ -59,13 +59,13 @@
 				<groupId>net.morher.house</groupId>
 				<version>${project.version}</version>
 			</dependency>
-			
+
 			<dependency>
 				<artifactId>house-core</artifactId>
 				<groupId>net.morher.house</groupId>
 				<version>${project.version}</version>
 			</dependency>
-			
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -78,6 +78,16 @@
 				<configuration>
 					<source>${java.source}</source>
 					<target>${java.target}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<source>${java.target}</source>
+					<doclint>-missing</doclint>
+					<quiet>true</quiet>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -102,5 +112,5 @@
 		<url>https://github.com/morher/house-api</url>
 		<connection>scm:git:https://github.com/morher/house-api.git</connection>
 		<developerConnection>scm:git:https://github.com/morher/house-api.git</developerConnection>
-    </scm>
+	</scm>
 </project>

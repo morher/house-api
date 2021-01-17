@@ -17,7 +17,9 @@ import net.morher.house.core.event.template.EventType;
  * 
  * @author Morten Hermansen
  * 
- * @see {@link EventTemplate}, {@link ButtonCommand}, {@link StatusReporting}
+ * @see EventTemplate
+ * @see ButtonCommand
+ * @see StatusReporting
  */
 public interface ButtonListener {
     public static final String EVENT_BUTTON_ONPRESS = "button.input.press";

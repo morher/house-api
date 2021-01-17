@@ -16,8 +16,8 @@ public interface LightCommand extends StatusReporting {
 
     /**
      * Set a dimming source to a given level. For light sources that does not support dimming, the implementing receiver should
-     * set a threshold level for what will turn it on. A dim level of 0 is the same as calling {@link #setPower(boolean)} with
-     * the value {@code false}. The maximum dim-level is 1. Using negative values or values over 1 results in undefined
+     * set a threshold level for what will turn it on. A dim level of 0 is the same as calling {@link #setPower(LightPower)}
+     * with the value {@code false}. The maximum dim-level is 1. Using negative values or values over 1 results in undefined
      * behavior, although delegates are recommended to handle these values gracefully by rejecting them.
      * 
      * As this event type just represents a request to set the dim level, the implementing delegate can choose to ignore the

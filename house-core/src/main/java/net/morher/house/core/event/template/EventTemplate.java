@@ -81,7 +81,7 @@ import net.morher.house.api.event.EventListener;
  * <ul>
  * <li>Of the type {@link Event}</li>
  * <li>Annotated with {@link EventSubject}</li>
- * <li>Annotated with {@link EvenAttribute}</li>
+ * <li>Annotated with {@link EventAttribute}</li>
  * </ul>
  * <p>
  * Except for the Event-parameter, all other parameters must be {@link String}.

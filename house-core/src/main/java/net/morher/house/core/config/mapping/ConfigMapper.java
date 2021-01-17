@@ -1,6 +1,7 @@
 package net.morher.house.core.config.mapping;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 import net.morher.house.api.config.ConfigurationElement;

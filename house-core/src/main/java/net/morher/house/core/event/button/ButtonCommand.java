@@ -20,7 +20,8 @@ import net.morher.house.core.event.template.EventType;
  * 
  * @author Morten Hermansen
  * 
- * @see {@link EventTemplate}, {@link ButtonListener}
+ * @see EventTemplate
+ * @see ButtonListener
  */
 public interface ButtonCommand {
     public static final String EVENT_BUTTON_PRESS = "button.control.press";
