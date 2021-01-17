@@ -24,6 +24,7 @@
 	<modules>
 		<module>house-api</module>
 		<module>house-core</module>
+		<module>house-module-template</module>
 	</modules>
 
 	<dependencies>

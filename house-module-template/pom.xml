@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>house-api-parent</artifactId>
+		<groupId>net.morher.house</groupId>
+		<version>0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>house-module-template</artifactId>
+	<version>0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>House Module Template</name>
+	<url>http://app.morher.net/house</url>
+
+	<properties>
+		<auto-service.version>1.0-rc6</auto-service.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<artifactId>house-api</artifactId>
+			<groupId>net.morher.house</groupId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<artifactId>house-core</artifactId>
+			<groupId>net.morher.house</groupId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.auto.service</groupId>
+			<artifactId>auto-service-annotations</artifactId>
+			<version>${auto-service.version}</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>com.google.auto.service</groupId>
+							<artifactId>auto-service</artifactId>
+							<version>${auto-service.version}</version>
+						</path>
+					</annotationProcessorPaths>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
