@@ -1,11 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>house-api-parent</artifactId>
 	<groupId>net.morher.house</groupId>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.1</version>
 	<packaging>pom</packaging>
 	<name>House API Parent</name>
 	<url>http://app.morher.net/house</url>
@@ -112,5 +110,6 @@
 		<url>https://github.com/morher/house-api</url>
 		<connection>scm:git:https://github.com/morher/house-api.git</connection>
 		<developerConnection>scm:git:https://github.com/morher/house-api.git</developerConnection>
-	</scm>
+	  <tag>house-api-parent-0.1</tag>
+  </scm>
 </project>
