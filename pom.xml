@@ -3,7 +3,7 @@
 
 	<artifactId>house-api-parent</artifactId>
 	<groupId>net.morher.house</groupId>
-	<version>0.1</version>
+	<version>0.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>House API Parent</name>
 	<url>http://app.morher.net/house</url>
@@ -110,6 +110,6 @@
 		<url>https://github.com/morher/house-api</url>
 		<connection>scm:git:https://github.com/morher/house-api.git</connection>
 		<developerConnection>scm:git:https://github.com/morher/house-api.git</developerConnection>
-	  <tag>house-api-parent-0.1</tag>
+	  <tag>HEAD</tag>
   </scm>
 </project>

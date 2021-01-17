@@ -4,11 +4,11 @@
 	<parent>
 		<artifactId>house-api-parent</artifactId>
 		<groupId>net.morher.house</groupId>
-		<version>0.1</version>
+		<version>0.2-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>house-api</artifactId>
-	<version>0.1</version>
+	<version>0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>House API</name>
 	<url>http://app.morher.net/house</url>
